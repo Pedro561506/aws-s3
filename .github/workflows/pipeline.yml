@@ -42,7 +42,7 @@ jobs:
       run : terraform -chdir=./terraform plan -out tfplan
 
     - name: Step 07 - Terraform Apply
-      run : terraform -chdir=./terraform apply tfplan
+      run : terraform -chdir=./terraform apply tfplan -destroy 
 
     - name: Step 08 - Terraform Show
       run : terraform -chdir=./terraform show
